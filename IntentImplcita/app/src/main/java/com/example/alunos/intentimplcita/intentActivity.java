@@ -24,8 +24,12 @@ public class intentActivity extends AppCompatActivity {
                     "Digite um endereço de Web...", Toast.LENGTH_SHORT);
             toast.show();
             return;
+        }else if(aUrl.startsWith("http://") == false){
+            Toast toast = Toast.makeText(getApplicationContext(),
+                    "Digite o http://...", Toast.LENGTH_SHORT);
+            toast.show();
+            return;
         }
-
         Intent intencao = new Intent(Intent.ACTION_VIEW, Uri.parse(aUrl.toLowerCase()));
         startActivity(intencao);
     }

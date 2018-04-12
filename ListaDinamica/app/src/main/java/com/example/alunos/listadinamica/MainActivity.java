@@ -1,9 +1,10 @@
-package com.example.matheus.exemploactivity;
+package com.example.alunos.listadinamica;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.content.Intent;
 import android.view.View;
-import android.widget.TextView;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -13,8 +14,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public void mudaTexto(View v){
-        TextView etiqueta = (TextView) findViewById(R.id.textView);
-        etiqueta.setText(getResources().getString(R.string.lblHello2));
+    public void mostrarLista(View v){
+        Intent it = new Intent(this, mostrarListaDinamica.class);
+        startActivity(it);
     }
 }
